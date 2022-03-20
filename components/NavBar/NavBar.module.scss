@@ -7,7 +7,7 @@
   overflow-x: hidden;
   background: var(--primary-color-st);
   backdrop-filter: blur(3px);
-  position: sticky;
+  position: fixed;
   top: 0;
 
   ul {
