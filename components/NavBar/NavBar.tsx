@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import ThemeIndicator from './components/ThemeIndicator'
+import { toggleNavOpen } from './hooks'
 import styles from './NavBar.module.scss'
 
 type INProps = {
@@ -8,7 +8,7 @@ type INProps = {
 }
 
 const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
-  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = toggleNavOpen(false)
 
   return (
     <nav className={isNavOpen ? `${styles.navBar} ${styles.navBarOpen}` : styles.navBar}>
