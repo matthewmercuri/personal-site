@@ -1,5 +1,6 @@
 import NavBar from '../NavBar'
 import useThemeToggle from './hooks/useThemeToggle'
+import styles from './Layout.module.scss'
 
 type INProps = {
   children?: JSX.Element
@@ -11,7 +12,7 @@ const Layout = ({children}: INProps) => {
   return (
     <>
       <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </>
   )
 }
