@@ -6,12 +6,11 @@ type INProps = {
 }
 
 const Layout = ({children}: INProps) => {
-  const toggleTheme = useThemeToggle(false)
+  const [isDarkTheme, toggleTheme] = useThemeToggle(false)
 
   return (
     <>
-      <NavBar />
-      <button onClick={() => toggleTheme()}>CLICK ME</button>
+      <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       <main>{children}</main>
     </>
   )

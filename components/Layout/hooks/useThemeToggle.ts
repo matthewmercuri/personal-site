@@ -9,7 +9,7 @@ function setLightTheme() {
 
 }
 
-export default function useThemeToggle(isInitialThemeDark = false) {
+export default function useThemeToggle(isInitialThemeDark = false): [boolean, () => void] {
   const [isDarkTheme, setIsDarkTheme] = useState(isInitialThemeDark)
 
   function toggleTheme() {
@@ -22,5 +22,5 @@ export default function useThemeToggle(isInitialThemeDark = false) {
     }
   }
 
-  return toggleTheme
+  return [isDarkTheme, toggleTheme]
 }
