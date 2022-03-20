@@ -13,6 +13,7 @@ const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
   return (
     <nav className={isNavOpen ? `${styles.navBar} ${styles.navBarOpen}` : styles.navBar}>
       <div className={styles.navBarContent}>
+        <span>matthewmercuri</span>
         <ul>
           <li>home</li>
           <li>about</li>

@@ -32,6 +32,13 @@
     align-items: center;
     justify-content: flex-end;
 
+    span {
+      flex-grow: 1;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
     &Hamburger {
       div {
         transition: all 0.3s ease;
