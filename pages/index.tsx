@@ -1,27 +1,10 @@
 import type { NextPage } from 'next'
+import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
   return (
    <>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
-    <h1>This is some test content</h1>
+    <Hero />
    </>
   )
 }
