@@ -11,7 +11,9 @@ const Layout = ({children}: INProps) => {
 
   return (
     <>
-      <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
+      <div className={styles.navContainer}>
+        <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
+      </div>
       <main className={styles.main}>{children}</main>
     </>
   )

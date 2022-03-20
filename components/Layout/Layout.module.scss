@@ -1,3 +1,10 @@
+.navContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   margin-top: var(--nav-bar-height);
 }
