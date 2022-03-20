@@ -1,12 +1,14 @@
 :root {
-  --primary-color: #fcfcfc;
-  --secondary-color: #171717;
-  --accent-color: #2a6abd;
+  --primary-color: rgb(252, 252, 252);
+  --primary-color-st: rgba(252, 252, 252, 0.4);
+  --secondary-color: rgb(23, 23, 23);
+  --accent-color: rgb(42, 106, 189);
 }
 
 [data-theme="dark"] {
-  --primary-color: #171717;
-  --secondary-color: #fcfcfc;
+  --primary-color: rgb(23, 23, 23);
+  --primary-color-st: rgba(23, 23, 23, 0.4);
+  --secondary-color: rgb(252, 252, 252);
 }
 
 html,

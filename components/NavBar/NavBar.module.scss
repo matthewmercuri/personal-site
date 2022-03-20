@@ -1,13 +1,17 @@
 .navBar {
   width: 100vw;
-  background-color: var(--primary-color);
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  background: var(--primary-color-st);
+  backdrop-filter: blur(3px);
+  position: sticky;
+  top: 0;
 
   ul {
+    margin: 0;
     padding: 0;
     list-style: none;
     display: none;
@@ -17,6 +21,8 @@
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+    background-color: var(--primary-color);
+    backdrop-filter: none;
   }
 
   &Content {
@@ -42,7 +48,6 @@
       &Open {
         div {
           margin: 0;
-          transition: all ease-in;
         }
         :first-child {
           transform: rotate(-45deg) translateY(0.6rem);
@@ -60,11 +65,11 @@
   &MobileContent {
     width: 100%;
     display: none;
-    flex-grow: 1;
     animation: navSlideIn 0.3s;
 
     &Open {
       display: block;
+      flex-grow: 1;
 
       ul {
         height: 60%;
