@@ -1,14 +1,27 @@
 .navBar {
-  width: 100%;
+  width: 100vw;
   background-color: var(--primary-color);
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: none;
+  }
+
+  &Open {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
   &Content {
     width: 90%;
-    height: 100%;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -18,11 +31,55 @@
         width: 2.4rem;
         height: 0.25rem;
         background-color: var(--secondary-color);
+        border-radius: 3px;
 
         &:not(:last-child) {
           margin-bottom: 0.6rem;
         }
       }
     }
+  }
+
+  &MobileContent {
+    width: 100%;
+    display: none;
+    flex-grow: 1;
+    background-color: orange;
+    animation: navSlideIn 0.3s;
+
+    &Open {
+      display: block;
+
+      ul {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    &Content {
+      ul {
+        display: flex;
+      }
+
+      &Hamburger {
+        display: none;
+      }
+    }
+  }  
+}
+
+@keyframes navSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
