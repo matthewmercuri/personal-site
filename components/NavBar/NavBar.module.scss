@@ -28,6 +28,7 @@
 
     &Hamburger {
       div {
+        transition: all 0.3s ease;
         width: 2.4rem;
         height: 0.25rem;
         background-color: var(--secondary-color);
@@ -35,6 +36,21 @@
 
         &:not(:last-child) {
           margin-bottom: 0.6rem;
+        }
+      }
+
+      &Open {
+        div {
+          margin: 0;
+        }
+        :first-child {
+          transform: rotate(-45deg) translateY(0.6rem);
+        }
+        :last-child {
+          transform: rotate(45deg) translateY(-0.6rem);
+        }
+        :nth-child(2) {
+          display: none;
         }
       }
     }

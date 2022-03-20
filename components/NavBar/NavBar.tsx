@@ -19,7 +19,10 @@ const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
           <li>resources</li>
         </ul>
         <ThemeIndicator toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-        <div className={styles.navBarContentHamburger} onClick={() => setIsNavOpen(!isNavOpen)}>
+        <div
+          className={isNavOpen ? `${styles.navBarContentHamburger} ${styles.navBarContentHamburgerOpen}` : styles.navBarContentHamburger}
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        >
           <div />
           <div />
           <div />
