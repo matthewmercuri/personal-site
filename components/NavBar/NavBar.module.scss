@@ -1,5 +1,28 @@
 .navBar {
-    width: 100%;
-    background-color: red;
-    height: 5rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Content {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &Hamburger {
+      div {
+        width: 2.4rem;
+        height: 0.25rem;
+        background-color: var(--secondary-color);
+
+        &:not(:last-child) {
+          margin-bottom: 0.6rem;
+        }
+      }
+    }
+  }
 }
