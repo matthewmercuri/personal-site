@@ -2,8 +2,8 @@ import styles from './NavBar.module.scss'
 
 const NavBar = () => {
   return (
-    <div className={styles.navBar}>
-    </div>
+    <nav className={styles.navBar}>
+    </nav>
   )
 }
   
