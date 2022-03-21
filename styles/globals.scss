@@ -2,6 +2,7 @@
 
 :root {
   --nav-bar-height: 4rem;
+  --mobile-content-width: 95vw;
   --max-content-width: 66vw;
   --primary-color: rgb(252, 252, 252);
   --primary-color-st: rgba(252, 252, 252, 0.4);
@@ -40,4 +41,20 @@ a {
 
 .scroll-lock {
   overflow: hidden;
+}
+
+.content-container {
+  width: var(--mobile-content-width);
+}
+
+@media screen and (min-width: 750px) {
+  .content-container {
+    width: 85vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content-container {
+    width: var(--max-content-width);
+  }
 }

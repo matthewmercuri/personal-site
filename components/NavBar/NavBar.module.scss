@@ -9,6 +9,7 @@
   backdrop-filter: blur(3px);
   position: fixed;
   top: 0;
+  z-index: 999;
 
   a {
     color: var(--text-primary);
