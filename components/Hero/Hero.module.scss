@@ -1,11 +1,16 @@
 .hero {
+  display: flex;
+  flex-wrap: wrap;
+
   &Animation {
     height: 120px;
+    width: 100%;
 
     img {
       display: block;
       margin: 0 auto;
-      width: 100px;
+      min-width: 100px;
+      width: 30%;
       animation: bounce 3s ease-in-out infinite;
     }
 
@@ -17,6 +22,19 @@
       background-color: rgba(0, 0, 0, 0.35);
       border-radius: 50%;
       animation: animateShadow 3s ease-in-out infinite;
+    }
+  }
+
+  &Content {
+    h1 {
+      font-weight: 800;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0.25rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
     }
   }
 }

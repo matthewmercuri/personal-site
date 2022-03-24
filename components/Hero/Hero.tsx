@@ -10,6 +10,12 @@ const Hero = ({}: INProps) => {
         <img src='/assets/atomcoin.svg' alt='atom coin icon' />
         <div className={styles.heroAnimationShadow} />
       </div>
+      <div className={styles.heroContent}>
+        <h1>Matthew Mercuri</h1>
+        <p>QUANTITATIVE FINANCE</p>
+        <p>DATA SCIENCE</p>
+        <p>FULL STACK DEVELOPMENT</p>
+      </div>
     </div>
   )
 }

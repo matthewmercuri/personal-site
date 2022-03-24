@@ -8,6 +8,8 @@ type INProps = {
   isDarkTheme: boolean
 }
 
+// TODO: Small issue where the blur creates an artifact on top of the nav bar on
+// desktop. Possible solution: Only apply blur when user has scrolled.
 const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
   const [isNavOpen, setIsNavOpen] = toggleNavOpen(false)
 
