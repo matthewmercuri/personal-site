@@ -5,10 +5,12 @@ type INProps = {
 
 const Hero = ({}: INProps) => {
   return (
-    <div className={`content-container ${styles.hero}`}>
-      <div className={styles.heroAnimation}>
-        <img src='/assets/atomcoin.svg' alt='atom coin icon' />
-        <div className={styles.heroAnimationShadow} />
+    <section className={`content-container ${styles.hero}`}>
+      <div className={styles.heroAccent}>
+        <div className={styles.heroAccentAnimation}>
+          <img src='/assets/atomcoin.svg' alt='atom coin icon' />
+          <div />
+        </div>
       </div>
       <div className={styles.heroContent}>
         <h1>Matthew Mercuri</h1>
@@ -16,7 +18,7 @@ const Hero = ({}: INProps) => {
         <p>DATA SCIENCE</p>
         <p>FULL STACK DEVELOPMENT</p>
       </div>
-    </div>
+    </section>
   )
 }
 

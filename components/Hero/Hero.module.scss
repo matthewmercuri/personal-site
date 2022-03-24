@@ -2,25 +2,34 @@
   display: flex;
   flex-wrap: wrap;
 
-  &Animation {
-    height: 120px;
+  &Accent {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    img {
-      display: block;
-      max-height: 100%;
-      margin: 0 auto;
-      animation: bounce 3s ease-in-out infinite;
-    }
+    &Animation {
+      height: 100%;
+      width: 100%;
 
-    &Shadow {
-      display: block;
-      margin: 10px auto 0 auto;
-      width: 100px;
-      height: 10px;
-      background-color: rgba(0, 0, 0, 0.35);
-      border-radius: 50%;
-      animation: animateShadow 3s ease-in-out infinite;
+      img {
+        min-width: 8rem;
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+        animation: bounce 3s ease-in-out infinite
+      }
+
+      div {
+        display: block;
+        min-width: 8rem;
+        width: 20%;
+        height: 0.5rem;
+        margin: 1rem auto 0 auto;
+        background-color: rgba(0, 0, 0, 0.35);
+        border-radius: 50%;
+        animation: animateShadow 3s ease-in-out infinite;
+      }
     }
   }
 
@@ -57,12 +66,18 @@
     justify-content: space-between;
     align-items: center;
 
-    &Animation {
+    &Accent {
       width: 50%;
       height: 100%;
 
-      img {
-        width: 10rem;
+      &Animation {
+        img {
+          width: 50%;
+        }
+
+        div {
+          width: 40%;
+        }
       }
     }
   }
@@ -70,8 +85,6 @@
 
 @media screen and (min-width: 1200px) {
   .hero{
-    margin-top: 3rem;
-
     &Content {
       h1 {
         font-size: 2.4rem;
