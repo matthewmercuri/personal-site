@@ -1,9 +1,6 @@
 import styles from './Hero.module.scss'
 
-type INProps = {
-}
-
-const Hero = ({}: INProps) => {
+const Hero = () => {
   return (
     <section className={`content-container ${styles.hero}`}>
       <div className={styles.heroAccent}>

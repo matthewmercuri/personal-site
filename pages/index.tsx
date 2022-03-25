@@ -1,10 +1,27 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Hero from '../components/Hero'
+import FeaturedPosts from '../components/FeaturedPosts'
+import getPostsFromLocalFolder from '../services/getPostsFromLocalFolder'
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const posts = getPostsFromLocalFolder()
+
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+type INProps = {
+  posts: []
+}
+
+const Home: NextPage<INProps> = ({posts}: INProps) => {
   return (
    <>
     <Hero />
+    <FeaturedPosts posts={posts} />
    </>
   )
 }
