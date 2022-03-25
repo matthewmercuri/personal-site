@@ -1,4 +1,4 @@
-export type PostType = {
+export type PostMetaDataType = {
   title: string,
   date: string,
   content: string,
@@ -9,5 +9,5 @@ export type PostType = {
 
 export type grayMatterParsedPostsType = {
   content: string,
-  data: PostType
+  data: PostMetaDataType
 }
