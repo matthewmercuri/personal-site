@@ -7,7 +7,8 @@ type INProps = {
 
 const FeaturedPosts = ({ posts }: INProps) => {
   return (
-    <section className='content-container'>
+    <section className={`content-container ${styles.featuredPosts}`}>
+      <h2>FEATURED</h2>
     </section>
   )
 }
