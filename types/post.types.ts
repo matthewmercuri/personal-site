@@ -1,13 +1,13 @@
 export type PostType = {
   title: string,
-  slug: string,
   date: string,
   content: string,
+  slug?: string,
   author?: string,
   tags?: string[]
 }
 
-export type grayMatterParsedType = {
+export type grayMatterParsedPostsType = {
   content: string,
-  data: {}
+  data: PostType
 }

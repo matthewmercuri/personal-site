@@ -1,7 +1,8 @@
+import { grayMatterParsedPostsType } from '../../types/post.types'
 import styles from './FeaturedPosts.module.scss'
 
 type INProps = {
-  posts: []
+  posts: grayMatterParsedPostsType[]
 }
 
 const FeaturedPosts = ({ posts }: INProps) => {
