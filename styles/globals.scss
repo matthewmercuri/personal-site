@@ -3,7 +3,7 @@
 :root {
   --nav-bar-height: 4rem;
   --mobile-content-width: 95vw;
-  --max-content-width: 55vw;
+  --max-content-width: 45vw;
   --primary-color: rgb(252, 252, 252);
   --primary-color-st: rgba(252, 252, 252, 0.4);
   --secondary-color: rgb(23, 23, 23);
@@ -60,6 +60,12 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
+  .content-container {
+    width: 55vw;
+  }
+}
+
+@media screen and (min-width: 1350px) {
   .content-container {
     width: var(--max-content-width);
   }
