@@ -19,7 +19,7 @@ const Layout = ({children}: INProps) => {
         <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       </div>
       <main className={styles.main}>{children}</main>
-      <Footer />
+      <Footer isDarkTheme={isDarkTheme} />
     </>
   )
 }
