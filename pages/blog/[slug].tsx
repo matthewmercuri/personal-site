@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
+import BlogPost from '../../components/BlogPost'
 import getPostsFromLocalFolder from '../../services/getPostsFromLocalFolder'
 import { grayMatterParsedPostsType } from '../../types/post.types'
 
@@ -34,6 +35,7 @@ type INProps = {
 const BlogPostPage = ({ post }: INProps) => {
   return (
    <>
+    <BlogPost post={post} />
    </>
   )
 }
