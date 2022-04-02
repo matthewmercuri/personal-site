@@ -1,0 +1,17 @@
+.postClickable {
+  h3 {
+    margin: 0 0 1.2rem 0;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .postClickable {
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}

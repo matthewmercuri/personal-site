@@ -2,7 +2,7 @@
   h2 {
     margin-top: 3rem;
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.7rem;
     letter-spacing: 0.16rem;
   }
@@ -11,6 +11,8 @@
     font-weight: 700;
     color: var(--text-secondary);
     font-style: italic;
+    cursor: pointer;
+    font-size: 0.9rem;
 
     img {
       width: 0.8rem;

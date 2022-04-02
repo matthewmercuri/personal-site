@@ -7,10 +7,9 @@ type INProps = {
 
 const PostClickable = ({postData}: INProps): JSX.Element => {
   return (
-    <>
+    <div className={styles.postClickable}>
       <h3>{postData.data.title}</h3>
-      <div>Test</div>
-    </>
+    </div>
   )
 }
 
