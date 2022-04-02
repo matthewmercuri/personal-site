@@ -20,7 +20,7 @@ type INProps = {
 const Blog = ({posts}: INProps) => {
   return (
    <section className='content-container'>
-     <h1 className='section-heading'>BLOG POSTS</h1>
+     <h1 className='section-heading no-top-margin'>BLOG POSTS</h1>
      {posts.map((post) => <PostClickable key={post.data.slug} postData={post} />)}
    </section>
   )

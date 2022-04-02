@@ -1,4 +1,5 @@
 import NavBar from '../NavBar'
+import Footer from '../Footer'
 import useThemeToggle from './hooks/useThemeToggle'
 import styles from './Layout.module.scss'
 
@@ -18,6 +19,7 @@ const Layout = ({children}: INProps) => {
         <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       </div>
       <main className={styles.main}>{children}</main>
+      <Footer />
     </>
   )
 }
