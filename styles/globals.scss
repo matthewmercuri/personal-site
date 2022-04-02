@@ -47,6 +47,14 @@ a {
   width: var(--mobile-content-width);
 }
 
+.section-heading {
+  margin-top: 3rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: 0.16rem;
+}
+
 @media screen and (min-width: 750px) {
   .content-container {
     width: 85vw;

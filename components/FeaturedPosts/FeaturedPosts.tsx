@@ -10,7 +10,7 @@ type INProps = {
 const FeaturedPosts = ({ posts }: INProps) => {
   return (
     <section className={`content-container ${styles.featuredPosts}`}>
-      <h2>FEATURED</h2>
+      <h2 className='section-heading'>FEATURED</h2>
       {posts.slice(0, 3).map(postData => {
         return <PostClickable key={postData.data.slug} postData={postData} />
       })}
