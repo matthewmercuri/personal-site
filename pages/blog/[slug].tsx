@@ -16,9 +16,9 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const posts = getPostsFromLocalFolder()
-  const post = posts.filter((post) => post.data.slug === slug)[0]
+  const post = posts.filter((post) => post.data.slug === context?.params?.slug)[0]
 
   return {
     props: {
@@ -32,7 +32,6 @@ type INProps = {
 }
 
 const BlogPostPage = ({ post }: INProps) => {
-  console.log(post)
   return (
    <>
    </>
