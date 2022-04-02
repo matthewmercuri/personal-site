@@ -17,7 +17,7 @@ const FeaturedPosts = ({ posts }: INProps) => {
       <Link href={'/blog'}>
         <div className={styles.featuredPostsLink}>
           <span>all posts</span>
-          <img src={'/icons/arrow_right.svg'} alt='all blog post link icon, click here to view all posts' />
+          <img src={'/icons/arrow_right_dark.svg'} alt='all blog post link icon, click here to view all posts' />
           <div />
         </div>
       </Link>
