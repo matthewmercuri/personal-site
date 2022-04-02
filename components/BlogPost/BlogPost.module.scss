@@ -47,6 +47,14 @@
     color: var(--text-secondary);
   }
 
+  img {
+    object-fit: contain;
+    display: block;
+    margin: 1rem auto;
+    max-width: 60%;
+    text-align: center;
+  }
+
   &Date {
     font-size: 0.8rem;
     background-color: var(--primary-color-alt);
