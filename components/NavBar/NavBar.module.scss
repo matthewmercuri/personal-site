@@ -1,5 +1,5 @@
 .navBar {
-  width: 100%;
+  width: 100vw;
   height: var(--nav-bar-height);
   display: flex;
   justify-content: center;
@@ -127,6 +127,8 @@
 
 @media screen and (min-width: 1000px) {
   .navBar {
-    width: var(--max-content-width);
+    &Content{
+      width: var(--max-content-width);
+    }
   }
 }

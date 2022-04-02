@@ -14,6 +14,7 @@ const BlogPost = ({ post }: INProps): JSX.Element => {
 
   return (
     <article className={`content-container ${styles.blogPost}`}>
+      <div className={styles.blogPostDate}>{post.data.date}</div>
       <div dangerouslySetInnerHTML={{ __html: content }}/>
     </article>
   )
