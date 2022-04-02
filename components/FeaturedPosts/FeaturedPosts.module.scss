@@ -6,4 +6,22 @@
     font-size: 1.7rem;
     letter-spacing: 0.16rem;
   }
+
+  &Link {
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-style: italic;
+
+    img {
+      width: 0.8rem;
+      margin-left: 0.25rem;
+    }
+
+    div {
+      background-color: var(--text-secondary);
+      height: 2px;
+      width: 4.5rem;
+      margin-top: 0.2rem;
+    }
+  }
 }
