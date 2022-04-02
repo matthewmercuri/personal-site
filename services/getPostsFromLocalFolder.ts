@@ -15,7 +15,7 @@ function getPostsFromLocalFolder(): grayMatterParsedPostsType[] {
 
   posts.forEach(({data}) => {
     if (!data.slug) {
-      data.slug = slugify(data.title).toLowerCase()
+      data.slug = slugify(data.title, {lower: true})
     }
   })
 
