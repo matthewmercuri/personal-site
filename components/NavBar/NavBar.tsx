@@ -19,7 +19,7 @@ const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
         {/* <span>matthewmercuri</span> */}
         <ul>
           <li><Link href='/'><a>home</a></Link></li>
-          <li><Link href='#'><a>blog</a></Link></li>
+          <li><Link href='/blog'><a>blog</a></Link></li>
           <li><Link href='#'><a>resources</a></Link></li>
           <li><Link href='#'><a>contact</a></Link></li>
         </ul>
@@ -36,7 +36,7 @@ const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
       <div className={isNavOpen ? `${styles.navBarMobileContent} ${styles.navBarMobileContentOpen}` : styles.navBarMobileContent}>
         <ul>
           <li onClick={() => setIsNavOpen(false)}><Link href='/'><a>home</a></Link></li>
-          <li onClick={() => setIsNavOpen(false)}><Link href='#'><a>blog</a></Link></li>
+          <li onClick={() => setIsNavOpen(false)}><Link href='/blog'><a>blog</a></Link></li>
           <li onClick={() => setIsNavOpen(false)}><Link href='#'><a>resources</a></Link></li>
           <li onClick={() => setIsNavOpen(false)}><Link href='#'><a>contact</a></Link></li>
         </ul>
