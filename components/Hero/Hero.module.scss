@@ -43,6 +43,7 @@
       margin: 0.25rem;
       color: var(--text-secondary);
       font-size: 1rem;
+      font-weight: 300;
     }
   }
 }
@@ -55,7 +56,7 @@
 
 @keyframes animateShadow {
   0% {transform: scaleX(1);}
-  50% {transform: scaleX(1.1);}
+  50% {transform: scaleX(1.2);}
   100% {transform: scaleX(1);}
 }
 
