@@ -1,11 +1,15 @@
 import styles from './ThemeIndicator.module.scss'
 
 type INProps = {
-  toggleTheme: () => void
+  themeDispatch: React.Dispatch<any>
   isDarkTheme: boolean
 }
 
-const ThemeIndicator = ({toggleTheme, isDarkTheme}: INProps) => {
+const ThemeIndicator = ({themeDispatch, isDarkTheme}: INProps) => {
+  function toggleTheme() {
+    isDarkTheme ? themeDispatch({type: "LIGHTMODE"}) : themeDispatch({type: "DARKMODE"})
+  }
+
   return (
     <div className={styles.themeIndicator} onClick={() => toggleTheme()}>
       {isDarkTheme ? (

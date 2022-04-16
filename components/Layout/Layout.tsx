@@ -1,18 +1,18 @@
 import NavBar from '../NavBar'
 import Footer from '../Footer'
-import useThemeToggle from './hooks/useThemeToggle'
 import styles from './Layout.module.scss'
 import Head from 'next/head'
+import { useContext } from 'react'
+import { ThemeContext } from '../../services/theme.context'
 
 type INProps = {
   children?: JSX.Element
 }
 
-
 // TODO: use a hook that accesses local storage to default
 // to user selection for theme choice
 const Layout = ({children}: INProps) => {
-  const [isDarkTheme, toggleTheme] = useThemeToggle(false)
+  const { isDarkTheme, dispatch } = useContext(ThemeContext)
 
   return (
     <>
@@ -27,7 +27,7 @@ const Layout = ({children}: INProps) => {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       <div className={styles.navContainer}>
-        <NavBar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
+        <NavBar isDarkTheme={isDarkTheme} themeDispatch={dispatch} />
       </div>
       <main className={styles.main}>{children}</main>
       <Footer isDarkTheme={isDarkTheme} />

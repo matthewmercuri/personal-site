@@ -4,13 +4,13 @@ import { toggleNavOpen } from './hooks'
 import styles from './NavBar.module.scss'
 
 type INProps = {
-  toggleTheme: () => void
+  themeDispatch: React.Dispatch<any>
   isDarkTheme: boolean
 }
 
 // TODO: Small issue where the blur creates an artifact on top of the nav bar on
 // desktop. Possible solution: Only apply blur when user has scrolled.
-const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
+const NavBar = ({themeDispatch, isDarkTheme}: INProps) => {
   const [isNavOpen, setIsNavOpen] = toggleNavOpen(false)
 
   return (
@@ -23,7 +23,7 @@ const NavBar = ({toggleTheme, isDarkTheme}: INProps) => {
           <li><Link href='#'><a>resources</a></Link></li>
           <li><Link href='#'><a>contact</a></Link></li>
         </ul>
-        <ThemeIndicator toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <ThemeIndicator themeDispatch={themeDispatch} isDarkTheme={isDarkTheme} />
         <div
           className={isNavOpen ? `${styles.navBarContentHamburger} ${styles.navBarContentHamburgerOpen}` : styles.navBarContentHamburger}
           onClick={() => setIsNavOpen(!isNavOpen)}
