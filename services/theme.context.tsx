@@ -30,10 +30,10 @@ export function ThemeProvider({ children }: INProps) {
   const [state, dispatch] = useReducer(themeReducer, initialState)
 
   useEffect(() => {
-    localStorage.getItem('darkMode') === 'true' ? (
-      dispatch({type: 'DARKMODE'})
-    ) : (
+    localStorage.getItem('darkMode') === 'false' ? (
       dispatch({type: 'LIGHTMODE'})
+    ) : (
+      dispatch({type: 'DARKMODE'})
     )
   }, [])
 
