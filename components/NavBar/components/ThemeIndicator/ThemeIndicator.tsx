@@ -20,5 +20,5 @@ const ThemeIndicator = ({themeDispatch, isDarkTheme}: INProps) => {
     </div>
   )
 }
-  
+
 export default ThemeIndicator

@@ -1,4 +1,4 @@
-import React, { useReducer, createContext } from "react"
+import React, { useReducer, createContext, useEffect } from "react"
 
 export type ThemeContextType = {
   isDarkTheme: boolean,
@@ -7,15 +7,15 @@ export type ThemeContextType = {
 
 export const ThemeContext = createContext({} as ThemeContextType)
 
-const initialState = false
+const initialState = null
 
 const themeReducer = (state: any, action: any) => {
   switch (action.type) {
     case "LIGHTMODE":
-      document.documentElement.setAttribute('data-theme', 'light')
+      if (typeof window !== 'undefined') {localStorage.setItem('darkMode', 'false')}
       return false
     case "DARKMODE":
-      document.documentElement.setAttribute('data-theme', 'dark')
+      if (typeof window !== 'undefined') {localStorage.setItem('darkMode', 'true')}
       return true
     default:
       return state
@@ -28,6 +28,14 @@ type INProps = {
 
 export function ThemeProvider({ children }: INProps) {
   const [state, dispatch] = useReducer(themeReducer, initialState)
+
+  useEffect(() => {
+    localStorage.getItem('darkMode') === 'true' ? (
+      dispatch({type: 'DARKMODE'})
+    ) : (
+      dispatch({type: 'LIGHTMODE'})
+    )
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ isDarkTheme: state, dispatch }}>

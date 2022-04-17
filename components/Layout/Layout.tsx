@@ -2,7 +2,7 @@ import NavBar from '../NavBar'
 import Footer from '../Footer'
 import styles from './Layout.module.scss'
 import Head from 'next/head'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ThemeContext } from '../../services/theme.context'
 
 type INProps = {
@@ -13,6 +13,14 @@ type INProps = {
 // to user selection for theme choice
 const Layout = ({children}: INProps) => {
   const { isDarkTheme, dispatch } = useContext(ThemeContext)
+
+  useEffect(() => {
+    if (isDarkTheme === true) {
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+  }, [isDarkTheme])
 
   return (
     <>
