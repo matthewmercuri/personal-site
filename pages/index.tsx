@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import Hero from '../components/Hero'
 import FeaturedPosts from '../components/FeaturedPosts'
 import getPostsFromLocalFolder from '../services/getPostsFromLocalFolder'

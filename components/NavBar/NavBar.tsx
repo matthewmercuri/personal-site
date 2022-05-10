@@ -20,7 +20,7 @@ const NavBar = ({themeDispatch, isDarkTheme}: INProps) => {
         <ul>
           <li><Link href='/'><a>home</a></Link></li>
           <li><Link href='/blog'><a>blog</a></Link></li>
-          <li><Link href='#'><a>resources</a></Link></li>
+          <li><Link href='/resources'><a>resources</a></Link></li>
           <li><Link href='#'><a>contact</a></Link></li>
         </ul>
         <ThemeIndicator themeDispatch={themeDispatch} isDarkTheme={isDarkTheme} />
@@ -37,7 +37,7 @@ const NavBar = ({themeDispatch, isDarkTheme}: INProps) => {
         <ul>
           <li onClick={() => setIsNavOpen(false)}><Link href='/'><a>home</a></Link></li>
           <li onClick={() => setIsNavOpen(false)}><Link href='/blog'><a>blog</a></Link></li>
-          <li onClick={() => setIsNavOpen(false)}><Link href='#'><a>resources</a></Link></li>
+          <li onClick={() => setIsNavOpen(false)}><Link href='/resources'><a>resources</a></Link></li>
           <li onClick={() => setIsNavOpen(false)}><Link href='#'><a>contact</a></Link></li>
         </ul>
       </div>
