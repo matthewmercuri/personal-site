@@ -4,7 +4,7 @@ import * as matter from 'gray-matter'
 import slugify from 'slugify'
 import { grayMatterParsedPostsType } from '../types/post.types'
 
-const isLocalTestPost = (title: string, env: string) => {
+const shouldExcludeTestPost = (title: string, env: string) => {
   if (env !== "local" && title.toLowerCase().includes("test article")) {
     return true
   }
@@ -18,7 +18,7 @@ function getPostsFromLocalFolder(): grayMatterParsedPostsType[] {
 
   fs.readdirSync(postsFolder).forEach(file => {
     const {data, content} = matter.read(path.join(postsFolder, file))
-    if (!isLocalTestPost(data.title, environment)) {
+    if (!shouldExcludeTestPost(data.title, environment)) {
       posts.push({data, content} as grayMatterParsedPostsType)
     }
   })
