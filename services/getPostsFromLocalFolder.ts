@@ -4,13 +4,23 @@ import * as matter from 'gray-matter'
 import slugify from 'slugify'
 import { grayMatterParsedPostsType } from '../types/post.types'
 
+const isLocalTestPost = (title: string, env: string) => {
+  if (env !== "local" && title.toLowerCase().includes("test article")) {
+    return true
+  }
+  return false
+}
+
 function getPostsFromLocalFolder(): grayMatterParsedPostsType[] {
   const posts = [] as grayMatterParsedPostsType[]
   const postsFolder = path.join(process.cwd(), 'posts')
+  const environment = process.env.ENVIRONMENT || "local"
 
   fs.readdirSync(postsFolder).forEach(file => {
     const {data, content} = matter.read(path.join(postsFolder, file))
-    posts.push({data, content})
+    if (!isLocalTestPost(data.title, environment)) {
+      posts.push({data, content} as grayMatterParsedPostsType)
+    }
   })
 
   posts.forEach(({data}) => {
