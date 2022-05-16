@@ -33,6 +33,13 @@ const Layout = ({children}: INProps) => {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
+        <meta property='og:site_name' content='Matthew Mercuri' />
+        <meta property='og:title' content='Matthew Mercuri - Quantitative Finance, Data Science, and Full Stack Development' />
+        <meta property='og:description' content='My work involving finance, data science, mathematics, and development' />
+        <meta name='description' content='My work involving finance, data science, mathematics, and development' />
+        <meta property='og:type' content='website' />
+        <meta property='og:image' content='https://www.matthewmercuri.com/share/ogshareimage.png' />
+        <meta property='og:url' content='https://www.matthewmercuri.com' />
       </Head>
       <div className={styles.navContainer}>
         <NavBar isDarkTheme={isDarkTheme} themeDispatch={dispatch} />
